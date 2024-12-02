@@ -1,0 +1,49 @@
+Simulating a cache with 2 total lines; each line has 2 words
+Each set in the cache contains 1 lines; there are 2 sets
+memory[0]=0xc10004
+memory[1]=0xc20005
+memory[2]=0xc30004
+memory[3]=0x1800000
+memory[4]=0x5
+memory[5]=0xa
+
+$$$ transferring word [0-1] from the memory to the cache
+$$$ transferring word [0-0] from the cache to the processor
+$$$ transferring word [0-1] from the cache to nowhere
+$$$ transferring word [4-5] from the memory to the cache
+$$$ transferring word [4-4] from the processor to the cache
+$$$ transferring word [4-5] from the cache to the memory
+$$$ transferring word [0-1] from the memory to the cache
+$$$ transferring word [1-1] from the cache to the processor
+$$$ transferring word [0-1] from the cache to nowhere
+$$$ transferring word [4-5] from the memory to the cache
+$$$ transferring word [5-5] from the processor to the cache
+$$$ transferring word [2-3] from the memory to the cache
+$$$ transferring word [2-2] from the cache to the processor
+$$$ transferring word [4-4] from the processor to the cache
+$$$ transferring word [3-3] from the cache to the processor
+machine halted
+total of 4 instructions executed
+final state of machine:
+
+@@@
+state:
+	pc 4
+	memory:
+		mem[ 0 ] 0x00C10004
+		mem[ 1 ] 0x00C20005
+		mem[ 2 ] 0x00C30004
+		mem[ 3 ] 0x01800000
+		mem[ 4 ] 0x00000000
+		mem[ 5 ] 0x0000000A
+	registers:
+		reg[ 0 ] 0
+		reg[ 1 ] 0
+		reg[ 2 ] 0
+		reg[ 3 ] 0
+		reg[ 4 ] 0
+		reg[ 5 ] 0
+		reg[ 6 ] 0
+		reg[ 7 ] 0
+end state
+$$$ Main memory words accessed: 12
